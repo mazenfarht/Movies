@@ -8,6 +8,7 @@ const actionMovies = [
     description: 'An ex-hitman comes out of retirement to track down the gangsters that took everything from him.',
     genre: 'Action, Crime, Thriller',
     trailerUrl: 'https://www.youtube.com/watch?v=2AUmvWm5ZD0',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'Mad Max: Fury Road',
@@ -18,6 +19,7 @@ const actionMovies = [
     description: 'In a post-apocalyptic wasteland, Max teams up with Furiosa to escape a tyrannical warlord and his army.',
     genre: 'Action, Adventure, Sci-Fi',
     trailerUrl: 'https://www.youtube.com/watch?v=hEJnMQG9ev8',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'The Dark Knight',
@@ -28,6 +30,7 @@ const actionMovies = [
     description: 'Batman faces the Joker, a criminal mastermind who seeks to create chaos in Gotham City.',
     genre: 'Action, Crime, Drama',
     trailerUrl: 'https://www.youtube.com/watch?v=EXeTwQWrcwY',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'Die Hard',
@@ -38,6 +41,7 @@ const actionMovies = [
     description: 'A New York cop tries to save a building full of hostages from a group of terrorists.',
     genre: 'Action, Thriller',
     trailerUrl: 'https://www.youtube.com/watch?v=2TQmpV5V8xg',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'The Avengers',
@@ -48,6 +52,7 @@ const actionMovies = [
     description: 'Earth’s mightiest heroes must come together to stop Loki from subjugating the planet.',
     genre: 'Action, Adventure, Sci-Fi',
     trailerUrl: 'https://www.youtube.com/watch?v=eOrNdBpGMv8',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'The Bourne Identity',
@@ -58,6 +63,7 @@ const actionMovies = [
     description: 'A man suffering from amnesia must figure out who he is and why assassins are trying to kill him.',
     genre: 'Action, Mystery, Thriller',
     trailerUrl: 'https://www.youtube.com/watch?v=cL0Zdcg54p4',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'Gladiator',
@@ -68,6 +74,7 @@ const actionMovies = [
     description: 'A betrayed Roman general seeks revenge against the corrupt emperor who murdered his family.',
     genre: 'Action, Adventure, Drama',
     trailerUrl: 'https://www.youtube.com/watch?v=owK1qxDselE',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'Terminator 2: Judgment Day',
@@ -78,6 +85,7 @@ const actionMovies = [
     description: 'A cyborg is sent from the future to protect a young boy who will grow up to lead humanity in a war against machines.',
     genre: 'Action, Sci-Fi, Thriller',
     trailerUrl: 'https://www.youtube.com/watch?v=BtLQ-l1dJo4',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'Mission: Impossible – Fallout',
@@ -88,6 +96,7 @@ const actionMovies = [
     description: 'Ethan Hunt and his IMF team are tasked with recovering stolen plutonium, but they are soon caught up in a larger conspiracy.',
     genre: 'Action, Adventure, Thriller',
     trailerUrl: 'https://www.youtube.com/watch?v=wb49-oV0F78',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'The Matrix',
@@ -98,6 +107,7 @@ const actionMovies = [
     description: 'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.',
     genre: 'Action, Sci-Fi',
     trailerUrl: 'https://www.youtube.com/watch?v=m8e-FF8MsqU',
+    movieUrl: 'https://tv.apple.com/eg'
   },
 ];
 
