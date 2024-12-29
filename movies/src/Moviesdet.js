@@ -1,12 +1,3 @@
-import f1 from '../src/img/6.jpg';
-import f2 from '../src/img/7.jpg';
-import f3 from '../src/img/8.jpg';
-import f4 from '../src/img/9.jpg';
-import f5 from '../src/img/10.jpg';
-import f6 from '../src/img/12.jpg';
-import f7 from '../src/img/13.jpg';
-import f8 from '../src/img/14.jpg';
-
 const movies = [
   {
     title: 'Dune: Prophecy',
@@ -18,6 +9,7 @@ const movies = [
     userScore: '78%',
     genre: 'Sci-Fi & Fantasy, Drama, Action & Adventure',
     trailerUrl: 'https://www.youtube.com/watch?v=YoHD9XEInc0',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'Inception',
@@ -28,6 +20,7 @@ const movies = [
     description: 'A thief who enters the dreams of others to steal secrets must plant an idea into someone\'s mind.',
     genre: 'Sci-Fi, Action, Adventure',
     trailerUrl: 'https://www.youtube.com/watch?v=YoHD9XEInc0',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'The Dark Knight',
@@ -38,6 +31,7 @@ const movies = [
     description: 'Batman faces the Joker, a criminal mastermind who seeks to bring Gotham City to its knees.',
     genre: 'Action, Crime, Drama',
     trailerUrl: 'https://www.youtube.com/watch?v=EXeTwQWrcwY',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'Interstellar',
@@ -48,6 +42,7 @@ const movies = [
     description: 'A group of explorers travel through a wormhole in space in an attempt to ensure humanity\'s survival.',
     genre: 'Sci-Fi, Drama, Adventure',
     trailerUrl: 'https://www.youtube.com/watch?v=zSWdZVtXT7E',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'The Shawshank Redemption',
@@ -58,6 +53,7 @@ const movies = [
     description: 'Two imprisoned men form a deep friendship, seeking a way to escape and survive in prison.',
     genre: 'Drama, Crime',
     trailerUrl: 'https://www.youtube.com/watch?v=6hB3S9bIaco',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'The Matrix',
@@ -68,6 +64,7 @@ const movies = [
     description: 'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.',
     genre: 'Sci-Fi, Action',
     trailerUrl: 'https://www.youtube.com/watch?v=vKQi3bBA1y8',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'The Godfather',
@@ -78,6 +75,7 @@ const movies = [
     description: 'The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.',
     genre: 'Crime, Drama',
     trailerUrl: 'https://www.youtube.com/watch?v=sY1S34973zA',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'Gladiator',
@@ -88,6 +86,7 @@ const movies = [
     description: 'A betrayed Roman general seeks revenge against the corrupt emperor who murdered his family and sent him into slavery.',
     genre: 'Action, Adventure, Drama',
     trailerUrl: 'https://www.youtube.com/watch?v=ol67qo3WhJk',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'Forrest Gump',
@@ -97,6 +96,7 @@ const movies = [
     rating: '8.8/10',
     description: 'The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an extraordinary memory.',
     trailerUrl: 'https://www.youtube.com/watch?v=bLvqoHBptjg',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'Titanic',
@@ -106,6 +106,7 @@ const movies = [
     rating: '7.8/10',
     description: 'A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.',
     trailerUrl: 'https://www.youtube.com/watch?v=kVrqfYjkTdQ',
+    movieUrl: 'https://tv.apple.com/eg'
   },
   {
     title: 'Pulp Fiction',
@@ -115,6 +116,7 @@ const movies = [
     rating: '8.9/10',
     description: 'The lives of two mob hitmen, a boxer, a gangster\'s wife, and a pair of diner bandits intertwine in four tales of violence and redemption.',
     trailerUrl: 'https://www.youtube.com/watch?v=s7EdQ4FqbhY',
+    movieUrl: 'https://tv.apple.com/eg'
   },
 ];
 
