@@ -8,6 +8,7 @@ const series = [
       description: 'A high school chemistry teacher turned methamphetamine producer partners with a former student to secure his family’s future.',
       genre: 'Crime, Drama, Thriller',
       trailerUrl: 'https://www.youtube.com/watch?v=HhesaQXLuRY',
+        movieUrl: 'https://tv.apple.com/eg'
     },
     {
       title: 'Game of Thrones',
@@ -18,6 +19,7 @@ const series = [
       description: 'Nine noble families wage war against each other to gain control over the mythical land of Westeros.',
       genre: 'Drama, Fantasy, Adventure',
       trailerUrl: 'https://www.youtube.com/watch?v=KPLWWIOCOOQ',
+        movieUrl: 'https://tv.apple.com/eg'
     },
     {
       title: 'Stranger Things',
@@ -28,6 +30,7 @@ const series = [
       description: 'When a young boy vanishes, a small town uncovers a mystery involving secret experiments, supernatural forces, and a strange girl.',
       genre: 'Drama, Fantasy, Horror',
       trailerUrl: 'https://www.youtube.com/watch?v=b9EkMc79ZSU',
+        movieUrl: 'https://tv.apple.com/eg'
     },
     {
       title: 'The Mandalorian',
@@ -38,6 +41,7 @@ const series = [
       description: 'A lone gunfighter makes his way through the outer reaches of the galaxy, far from the authority of the New Republic.',
       genre: 'Sci-Fi, Adventure, Action',
       trailerUrl: 'https://www.youtube.com/watch?v=aOC8E8z_ifw',
+        movieUrl: 'https://tv.apple.com/eg'
     },
     {
       title: 'Money Heist',
@@ -48,6 +52,7 @@ const series = [
       description: 'A criminal mastermind and eight thieves plan the most ambitious heist in history, aiming to print billions of euros in the Royal Mint of Spain.',
       genre: 'Action, Crime, Drama',
       trailerUrl: 'https://www.youtube.com/watch?v=_InqQJRqGW4',
+        movieUrl: 'https://tv.apple.com/eg'
     },
     {
       title: 'Sherlock',
@@ -58,6 +63,7 @@ const series = [
       description: 'A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London.',
       genre: 'Crime, Drama, Mystery',
       trailerUrl: 'https://www.youtube.com/watch?v=xK7S9mrFWL4',
+        movieUrl: 'https://tv.apple.com/eg'
     },
     {
       title: 'Peaky Blinders',
@@ -68,6 +74,7 @@ const series = [
       description: 'A gangster family epic set in 1919 Birmingham, England; centered on a gang who sew razor blades in the peaks of their caps, and their boss Tommy Shelby.',
       genre: 'Crime, Drama',
       trailerUrl: 'https://www.youtube.com/watch?v=oVzVdvGIC7U',
+        movieUrl: 'https://tv.apple.com/eg'
     },
     {
       title: 'The Boys',
@@ -78,6 +85,7 @@ const series = [
       description: 'A group of vigilantes set out to take down corrupt superheroes who abuse their superpowers.',
       genre: 'Action, Sci-Fi, Drama',
       trailerUrl: 'https://www.youtube.com/watch?v=06rueu_fh30',
+        movieUrl: 'https://tv.apple.com/eg'
     },
   ];
   
