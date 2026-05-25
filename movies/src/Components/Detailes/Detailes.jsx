@@ -1,88 +1,356 @@
-import React from 'react';
-import movies from '../../Moviesdet'; // Import movies data
-import series from '../../Seriesdet'; // Import series data
-import { toast } from 'react-toastify';
-import { useParams } from 'react-router-dom'; // Import useParams to get the route parameters
-import actionMovies from '../../Actiondet';
+import React from "react";
+
+import movies from "../../Moviesdet";
+import series from "../../Seriesdet";
+import actionMovies from "../../Actiondet";
+
+import { toast } from "react-toastify";
+
+import { useParams } from "react-router-dom";
+
 export default function Detailes() {
-  const { itemId } = useParams(); // Get the ID from the URL
-  const id = parseInt(itemId); // Convert ID to integer
-  const notify =(msg,type)=>{
+  /* ================= GET ROUTE PARAM ================= */
+
+  // Get item ID from URL
+  const { itemId } = useParams();
+
+  // Convert ID to number
+  const id = parseInt(itemId);
+
+  /* ================= TOAST FUNCTION ================= */
+
+  // Show toast notification
+  const notify = (msg, type) => {
     toast[type](msg);
-};
-  // Find the item in movies or series datasets
+  };
+
+  /* ================= FIND ITEM ================= */
+
+  // Search in movies
   const movie = movies.find((item) => item.id === id);
+
+  // Search in series
   const serie = series.find((item) => item.id === id);
+
+  // Search in action movies
   const action = actionMovies.find((item) => item.id === id);
 
+  // Combine all datasets
+  const item = movie || serie || action;
+
+  /* ================= WATCH LIST ================= */
+
   const AddWatchList = () => {
-    const watchList = JSON.parse(localStorage.getItem('watchList')) || []; // جلب قائمة المشاهدة الحالية
-    const isExist = watchList.some((i) => i.id === item.id); // التحقق من وجود العنصر
-  
+    // Get existing watch list
+    const watchList = JSON.parse(localStorage.getItem("watchList")) || [];
+
+    // Check if item already exists
+    const isExist = watchList.some((i) => i.id === item.id);
+
+    // Add item if not exists
     if (!isExist) {
-      watchList.push(item); // إضافة العنصر إذا لم يكن موجودًا
-      localStorage.setItem('watchList', JSON.stringify(watchList)); // حفظ القائمة المحدثة
-      notify('Added to Watch List!', 'success'); // عرض رسالة النجاح
+      watchList.push(item);
+
+      localStorage.setItem("watchList", JSON.stringify(watchList));
+
+      notify("Added to Watch List!", "success");
     } else {
-      notify('Already in Watch List!', 'error'); // عرض رسالة الخطأ
+      notify("Already in Watch List!", "error");
     }
   };
-  
-  
-  // Combine both datasets and determine whether it's a movie or series
-  const item = movie || serie || action ;
 
-  // If item is not found
+  /* ================= ITEM NOT FOUND ================= */
+
   if (!item) {
-    return <div>Item not found</div>;
+    return (
+      <div
+        className="
+          text-white
+          min-h-screen
+          flex
+          items-center
+          justify-center
+          text-2xl
+          font-bold
+        "
+      >
+        Item not found
+      </div>
+    );
   }
 
   return (
-    <div className="p-6 text-white min-h-screen">
-      <div className="flex flex-col md:flex-row items-center justify-center mb-12 bg-black bg-opacity-50 p-6 rounded-lg">
-        {/* Item Poster */}
-        <div className="w-full md:w-1/3 mb-6 md:mb-0">
+    <div
+      className="
+        text-white
+        min-h-screen
+
+        px-4
+        sm:px-6
+        md:px-10
+        lg:px-16
+
+        py-6
+      "
+    >
+      {/* ================================================= */}
+      {/* ================= MAIN CONTENT ================== */}
+      {/* ================================================= */}
+
+      <div
+        className="
+          flex
+          flex-col
+          lg:flex-row
+
+          gap-8
+
+          items-center
+          justify-center
+
+          bg-black/50
+
+          rounded-2xl
+
+          p-4
+          md:p-8
+        "
+      >
+        {/* ================= POSTER IMAGE ================= */}
+
+        <div
+          className="
+            w-full
+            lg:w-[40%]
+
+            flex
+            justify-center
+          "
+        >
           <img
             src={item.image}
             alt={item.title}
-            className="w-[650px] h-[500px] rounded-lg shadow-lg"
+            className="
+              w-full
+              max-w-[500px]
+
+              h-[250px]
+              sm:h-[350px]
+              md:h-[450px]
+              lg:h-[550px]
+
+              object-cover
+
+              rounded-2xl
+
+              shadow-lg
+            "
           />
         </div>
 
-        {/* Item Details */}
-        <div className="w-full md:w-2/3 px-6">
-          <h2 className="text-6xl font-bold mb-2">
-            {item.title}{' '}
-            <span className="text-4xl text-gray-400">({item.releaseDate})</span>
-          </h2>
-          <p className="text-sm text-gray-400 p-1 mb-4">{item.genre}</p>
-          <p className="mb-6">{item.description}</p>
-          {/* <h1 className='mb-6 font-bold text-lg '>Add To Watch list </h1> */}
-          {/* Trailer Button */}
-          <a
-            href={item.trailerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-red-800 hover:bg-blue-700 rounded-lg text-white font-bold"
+        {/* ================= DETAILS SECTION ================= */}
+
+        <div
+          className="
+            w-full
+            lg:w-[60%]
+          "
+        >
+          {/* TITLE */}
+          <h2
+            className="
+              font-bold
+
+              text-3xl
+              sm:text-4xl
+              md:text-5xl
+              lg:text-6xl
+
+              leading-tight
+            "
           >
-            ▶ Watch {movie ? 'Movie' : 'Series'}
-          </a>
-          <button className='px-6 py-3 bg-blue-700 hover:bg-red-800 m-4 rounded-lg text-white font-bold' onClick={AddWatchList}>Add To Watch List</button>
+            {item.title}
+
+            <span
+              className="
+                block
+                sm:inline
+
+                text-gray-400
+
+                text-xl
+                md:text-3xl
+
+                mt-2
+                sm:ml-3
+              "
+            >
+              ({item.releaseDate})
+            </span>
+          </h2>
+
+          {/* GENRE */}
+          <p
+            className="
+              text-gray-400
+
+              text-sm
+              sm:text-base
+
+              py-3
+            "
+          >
+            {item.genre}
+          </p>
+
+          {/* DESCRIPTION */}
+          <p
+            className="
+              text-sm
+              sm:text-base
+              md:text-lg
+
+              leading-7
+
+              text-gray-200
+            "
+          >
+            {item.description}
+          </p>
+
+          {/* ================= BUTTONS ================= */}
+
+          <div
+            className="
+              flex
+              flex-col
+              sm:flex-row
+
+              gap-4
+
+              mt-8
+            "
+          >
+            {/* WATCH BUTTON */}
+            <a
+              href={item.movieUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                text-center
+
+                px-6
+                py-3
+
+                bg-red-800
+                hover:bg-blue-700
+
+                rounded-xl
+
+                font-bold
+
+                transition-all
+                duration-300
+
+                hover:scale-105
+              "
+            >
+              ▶ Watch {movie ? "Movie" : "Series"}
+            </a>
+
+            {/* WATCHLIST BUTTON */}
+            <button
+              onClick={AddWatchList}
+              className="
+                px-6
+                py-3
+
+                bg-blue-700
+                hover:bg-red-800
+
+                rounded-xl
+
+                font-bold
+
+                transition-all
+                duration-300
+
+                hover:scale-105
+              "
+            >
+              Add To Watch List
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Trailer Section */}
-      <h1 className="text-5xl font-bold py-6">Watch The Trailer</h1>
-      <div className="justify-center">
-        <iframe
-          width="650"
-          height="400"
-          src={`https://www.youtube.com/embed/${item.trailerUrl.split('v=')[1]}`}
-          title={`${item.title} Trailer`}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+      {/* ================================================= */}
+      {/* ================= TRAILER SECTION =============== */}
+      {/* ================================================= */}
+
+      <div className="mt-12">
+        {/* SECTION TITLE */}
+        <h1
+          className="
+            font-bold
+
+            text-2xl
+            sm:text-3xl
+            md:text-5xl
+
+            mb-6
+          "
+        >
+          Watch The Trailer
+        </h1>
+
+        {/* RESPONSIVE VIDEO */}
+        <div
+          className="
+            w-full
+
+            flex
+            justify-center
+          "
+        >
+          <div
+            className="
+              relative
+
+              w-full
+              max-w-6xl
+
+              aspect-video
+            "
+          >
+            <iframe
+              src={`https://www.youtube.com/embed/${
+                item.trailerUrl.split("v=")[1]
+              }`}
+              title={`${item.title} Trailer`}
+              className="
+                absolute
+                top-0
+                left-0
+
+                w-full
+                h-full
+
+                rounded-2xl
+              "
+              frameBorder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture
+              "
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
       </div>
     </div>
   );
